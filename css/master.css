@@ -167,6 +167,7 @@ ul {
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 @media (max-width:767px) {
     .wrapper {
@@ -279,6 +280,16 @@ ul {
 .targets .details .progress > .green span::after {
     border-top-color: var(--green-color);
 }
+@media (max-width:767px) {
+    .targets .target-row .details .progress > span.blue span {
+        bottom: -28px;
+    }
+    .targets .details .progress > span.blue span::after {
+        bottom: 19px;
+        border-bottom-color: var(--blue-color);
+        border-top-color: transparent;
+    }
+}
 .blue .icon,
 .blue .progress {
     background-color: rgb(0 117 255 / 20%);
@@ -292,4 +303,75 @@ ul {
     background-color: rgb(34 197 94 / 20%);
 }
 /* End Targets */
+/* Start Tickets */
+.tickets .box {
+    border: 1px solid #ccc;
+    width: calc(50% - 10px);
+}
+@media (max-width:767px) {
+    .tickets .box {
+        width: 100%;
+    }
+}
+/* End Tickets */
+/* Start Latest News */
+.latest-news .news-raw:not(:last-of-type) {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.latest-news .news-raw img {
+    width: 100px;
+    border-radius: 6px;
+    margin-right: 15px;
+}
+.latest-news .info {
+    flex-grow: 1;
+}
+.latest-news .info h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+@media (max-width: 767px) {
+    .latest-news .news-raw {
+        display: block;
+    }
+    .latest-news .info h3 {
+        margin: 10px 0;
+    }
+    .latest-news .news-raw .label {
+        width: fit-content;
+        margin: 10px auto;
+    }
+}
+/* End Latest News */
+/* Start Tasks */
+.tasks .task-row:not(:last-of-type) {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.tasks .done {
+    opacity: 0.3;
+}
+.tasks .done h3,
+.tasks .done p {
+    text-decoration: line-through;
+}
+.tasks .task-row .delete {
+    cursor: pointer;
+    transition: 0.3s;
+}
+.tasks .task-row .delete:hover {
+    color: var(--red-color);
+}
+.tasks .done .delete:hover {
+    color: var(--green-color);
+}
+/* End Tasks */
+/* Start Top Search Items */
+.search-items .items span:last-of-type {
+    margin-right: 25px;
+}
+/* End Top Search Items */
 /* End Content */
