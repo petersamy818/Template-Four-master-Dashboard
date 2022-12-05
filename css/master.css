@@ -374,4 +374,76 @@ ul {
     margin-right: 25px;
 }
 /* End Top Search Items */
+/* Start Latest Uploads */
+.latest-uploads ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.latest-uploads ul li img {
+    width: 40px;
+    height: 40px;
+}
+/* End Latest Uploads */
+/* Start Last Project Progress */
+.last-project ul::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--blue-color);
+    left: 11px;
+}
+.last-project ul li::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid white;
+    outline: 2px solid var(--blue-color);
+    margin-right: 15px;
+    z-index: 1;
+}
+.last-project ul li.done::before {
+    background-color: var(--blue-color);
+}
+.last-project ul li.current::before {
+    animation: change-color 0.8s infinite alternate;
+}
+.last-project .launch-icon {
+    position: absolute;
+    width: 160px;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+}
+/* End Last Project Progress */
+/* Start Reminders */
+.reminders ul li .key {
+    width: 15px;
+    height: 15px;
+}
+.reminders ul li > .blue {
+    border-left: 2px solid var(--blue-color);
+}
+.reminders ul li > .green {
+    border-left: 2px solid var(--green-color);
+}
+.reminders ul li > .orange {
+    border-left: 2px solid var(--orange-color);
+}
+.reminders ul li > .red {
+    border-left: 2px solid var(--red-color);
+}
+/* End Reminders */
+/* Start Animations */
+@keyframes  change-color {
+    from {
+        background-color: var(--blue-color);
+    }
+    to {
+        background-color: white;
+    }
+}
+/* End Animations */
 /* End Content */
